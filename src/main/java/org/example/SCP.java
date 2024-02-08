@@ -775,9 +775,9 @@ public class SCP {
                 snd_segments.remove(0);
                 i--;
             }
-            if(_itimediff(rmt_max_acksn,cur.sn)<0){
-                return;
-            }
+ //           if(_itimediff(rmt_max_acksn,cur.sn)<0){
+ //               return;
+ //           }有bug，不管了 屏蔽了。上次加上打包后运行 一开始和偶尔总是重发，好像是因为这个提前跳出循环所致。先正常运行有空在看哪里算错了。
         }
 
     }
